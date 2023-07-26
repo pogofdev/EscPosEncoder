@@ -2,6 +2,9 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 
+import json from '@rollup/plugin-json';
+
+
 export default [
 
 	// Browser-friendly UMD build
@@ -15,6 +18,7 @@ export default [
 		plugins: [
 			resolve({ browser: true }), 
 			commonjs(),
+			json(),
             terser()
 		]
 	},
@@ -29,6 +33,7 @@ export default [
 		plugins: [
 			resolve({ browser: true }), 
 			commonjs(),
+			json(),
             terser()
 		]
 	},

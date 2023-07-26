@@ -2,7 +2,7 @@ import linewrap from 'linewrap';
 import {createCanvas} from 'canvas';
 import Dither from 'canvas-dither';
 import Flatten from 'canvas-flatten';
-import CodepageEncoder from 'codepage-encoder';
+import CodepageEncoder from './lib/codepage-encoder.mjs';
 
 const codepageMappings = {
   epson: {
@@ -43,6 +43,7 @@ const codepageMappings = {
     'windows1257': 0x33,
     'windows1258': 0x34,
     'rk1048': 0x35,
+    'tcvn': 0x1b,
   },
 
   zjiang: {
@@ -89,6 +90,7 @@ const codepageMappings = {
     'cp720': 0x5d,
     'windows1258': 0x5e,
     'cp775': 0x5f,
+    'tcvn': 0x1b,
   },
 
   bixolon: {
@@ -100,6 +102,7 @@ const codepageMappings = {
     'cp865': 0x05,
     'cp851': 0x0b,
     'cp858': 0x13,
+    'tcvn': 0x1b,
   },
 
   star: {
@@ -113,6 +116,7 @@ const codepageMappings = {
     'cp866': 0x11,
     'cp852': 0x12,
     'cp858': 0x13,
+    'tcvn': 0x1b,
   },
 
   citizen: {
@@ -128,6 +132,7 @@ const codepageMappings = {
     'windows1252': 0x10,
     'cp858': 0x13,
     'cp864': 0x28,
+    'tcvn': 0x1b,
   },
 
   legacy: {
@@ -163,6 +168,7 @@ const codepageMappings = {
     'windows1256': 0x5c,
     'windows1257': 0x19,
     'windows1258': 0x5e,
+    'tcvn': 0x1b,
   },
 };
 
